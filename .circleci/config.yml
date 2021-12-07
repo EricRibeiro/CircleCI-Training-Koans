@@ -1,10 +1,11 @@
 version: 2
+
 jobs:
   build:
     docker: circleci/node
     steps:
       - checkout
-      - run
+      - run:
         name: "Execute command"
         command: | 
           echo "You can even have multiline commands."
