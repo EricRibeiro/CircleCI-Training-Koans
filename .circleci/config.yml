@@ -1,20 +1,19 @@
 version: 2.1
 
+orbs:
+  ruby: circleci/ruby@1.2.0
+
 jobs:
-  test:
-    parallelism: 2
-    docker: 
-      - image: circleci/node
+  build:
+    docker:
+      - image: cimg/base:stable
     steps:
       - checkout
-      - run:
-          name: Run tests
-          command: |
-            TEST_FILES=$(circleci tests glob "**/*.sh" | circleci tests split --split-by=name)
-            echo $TEST_FILES
-            bash $TEST_FILES
+      - ruby/install:
+          version: '2.6.3'
+      - run: ruby -v
+
 workflows:
-  version: 2
-  test:
+  run-jobs:
     jobs:
-      - test
+      - build
