@@ -10,15 +10,15 @@ jobs:
       - restore_cache:
           name: Restore Yarn Package Json Cache
           keys:      
-            - yarn-packages-v1-{{ checksum "yarn.lock" }}
-            - yarn-packages-v1-      
+            - yarn-packages-v2-{{ checksum "yarn.lock" }}
+            - yarn-packages-v2-      
       - run:
           name: Install Dependencies
           command: yarn --immutable --cache-folder ~/.cache/yarn
       # Uncomment below and set the key to point to the proper file
       - save_cache:
           name: Save Yarn Package Json Cache
-          key: yarn-packages-v1-{{ checksum "yarn.lock" }}
+          key: yarn-packages-v2-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
 

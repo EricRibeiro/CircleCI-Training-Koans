@@ -14,6 +14,9 @@ You can find below the job link for each challenge:
  - 04 Parallelism: https://app.circleci.com/pipelines/github/EricRibeiro/CircleCI-Training-Koans/10/workflows/a913e1ef-bf93-4c0d-b710-2f23c6737422/jobs/11
  - 05 Orbs: https://app.circleci.com/pipelines/github/EricRibeiro/CircleCI-Training-Koans/11/workflows/4fa81b01-8a3a-43d8-843d-5870189157d3/jobs/12
  - 06 Caching: 
+    - https://app.circleci.com/pipelines/github/EricRibeiro/CircleCI-Training-Koans/12/workflows/e2ade7c4-4d19-4cc3-8b93-06c91fe34067/jobs/13
+    - https://app.circleci.com/pipelines/github/EricRibeiro/CircleCI-Training-Koans/13/workflows/dc0d1ad6-694f-4368-9ef1-68258613bc55/jobs/14
+    - 
  - 07 Test Summary: 
  - 08 Branch filters:
  - 09 Tag filters:
