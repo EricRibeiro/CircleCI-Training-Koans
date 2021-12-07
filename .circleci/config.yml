@@ -10,18 +10,9 @@ jobs:
       - run:
           name: Run tests
           command: |
-            TEST_FILES=$(circleci tests glob "**/*.sh" | circleci tests split --split-by=timings)
+            TEST_FILES=$(circleci tests glob "**/*.sh" | circleci tests split --split-by=name)
             echo $TEST_FILES
             bash $TEST_FILES
-      - run:
-          name: Run Hello test
-          command: |
-            bash src/test_hello.sh
-      - run:
-          name: Run Goodbye test
-          command: |
-            bash src/test_goodbye.sh
-
 workflows:
   version: 2
   test:
