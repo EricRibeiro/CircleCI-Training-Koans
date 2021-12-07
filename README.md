@@ -9,7 +9,7 @@ In this repo, I'm keeping the solution for the challenges of the original [Kōan
 You can find below the job link for each challenge:
 
  - 01 Hello World: https://app.circleci.com/pipelines/github/EricRibeiro/CircleCI-Training-Koans/1/workflows/bd3242d6-7518-445a-8f16-eb698dd91a02/jobs/1
- - 02 Yaml: 
+ - 02 Yaml: https://app.circleci.com/pipelines/github/EricRibeiro/CircleCI-Training-Koans/6/workflows/b2a232e3-0694-4e02-995f-8aacf6912e90/jobs/6
  - 03 Databases: 
  - 04 Parallelism:
  - 05 Orbs: 
