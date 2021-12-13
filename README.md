@@ -21,8 +21,8 @@ You can find below the job link for each challenge:
  - 08 Branch filters:
     - [Without deploy](https://app.circleci.com/pipelines/github/EricRibeiro/CircleCI-Training-Koans/18/workflows/c69369f2-a88e-4c79-a753-046188ada5c7)
     - [With deploy](https://app.circleci.com/pipelines/github/EricRibeiro/CircleCI-Training-Koans/19/workflows/22eab6bb-6dd6-4ab8-b5ac-152d936a99a6)
- - 09 Tag filters:
- - 10 Workflow Fan Out:
+ - 09 Tag filters
+ - [10 Workflow Fan Out](https://app.circleci.com/pipelines/github/EricRibeiro/CircleCI-Training-Koans/29/workflows/7c768cee-6b36-4a7c-8a91-cc72a2e936fb)
  - 11 Workflow Sequential:
  - 12 Matrix Builds: 
  - 13 Workspaces: 
