@@ -23,7 +23,7 @@ You can find below the job link for each challenge:
     - [With deploy](https://app.circleci.com/pipelines/github/EricRibeiro/CircleCI-Training-Koans/19/workflows/22eab6bb-6dd6-4ab8-b5ac-152d936a99a6)
  - 09 Tag filters
  - [10 Workflow Fan Out](https://app.circleci.com/pipelines/github/EricRibeiro/CircleCI-Training-Koans/29/workflows/7c768cee-6b36-4a7c-8a91-cc72a2e936fb)
- - 11 Workflow Sequential:
+ - [11 Workflow Sequential](https://app.circleci.com/pipelines/github/EricRibeiro/CircleCI-Training-Koans/31/workflows/95e4d4fa-8865-442f-b2da-e6392169b1ba)
  - 12 Matrix Builds: 
  - 13 Workspaces: 
  - 14 Conditional Logics:
