@@ -1,37 +1,31 @@
 version: 2.1
 
 parameters:
-  condition-workflow:
+  run_by_api:
     type: boolean
-    default: true
+    default: false
 
 jobs:
-  my-job:
+  regular:
     docker:
       - image: cimg/base:stable
     steps:
       - checkout
-      - when:
-          condition:
-            equal: [ main, << pipeline.git.branch >> ]
-          steps:
-            - run: echo "I am on main"
+      - run: echo "I was run normally"
 
-  conditional-job:
+  api-job:
     docker:
       - image: cimg/base:stable
     steps:
       - checkout
-      - run: echo "This ran on a pipeline parameter"
+      - run: echo "I was run by API"
 
 workflows:
-  version: 2
-  my-workflow:
+  normal:
     jobs:
-      - my-job
+      - regular
 
-  conditional-workflow:
-    when:
-      << pipeline.parameters.condition-workflow >>
+  api-workflow:
+    when: << pipeline.parameters.run_by_api >> # Without modifying the config, run api-job
     jobs:
-      - conditional-job
+      - api-job
