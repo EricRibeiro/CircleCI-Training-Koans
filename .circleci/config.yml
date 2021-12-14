@@ -16,7 +16,6 @@ jobs:
             equal: [ main, << pipeline.git.branch >> ]
           steps:
             - run: echo "I am on main"
-      - run: echo "Testing"
 
   conditional-job:
     docker:
