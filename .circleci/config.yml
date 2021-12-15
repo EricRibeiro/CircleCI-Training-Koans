@@ -37,7 +37,9 @@ jobs:
               echo "The log should exist at ~/project/log.txt after running the 'generatelogs' command"
               exit 1
             fi
-      - endmission
+      - endmission:
+          exitCode: 1
+
 
 workflows:
   version: 2
