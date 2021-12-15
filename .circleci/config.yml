@@ -1,48 +1,42 @@
 version: 2.1
 
-executors:
-  custom-node:
+jobs:
+  build:
     docker:
       - image: circleci/node
-
-commands:
-  generatelogs:
-    description: "A command to generate a log file"
-    parameters:
-      path:
-        type: string
-        default: "~/randomfolder"
     steps:
-      - run: echo "Log file" > <<parameters.path>>/log.txt
-  endmission:
-    description: "Use the parameters of this command to exit this mission with a green build."
-    parameters:
-      exitCode:
-        type: integer
-        default: 1
+      - checkout
+      - run: echo "Building complete"
+  test:
+    docker:
+      - image: circleci/node
     steps:
-      - run: exit <<parameters.exitCode>>
-
-jobs:
-  orb-intro:
-    executor: custom-node
+      - checkout
+      - run: echo "Testing complete"
+  deploy:
+    docker:
+      - image: circleci/node
     steps:
-      - run: echo "console.log('complete')" | node
-      - generatelogs: 
-          path: ~/project
-      - run:
-          name: Check for logs - DO NOT MODIFY
-          command: |
-            if [ ! -f ~/project/log.txt ]; then
-              echo "The log should exist at ~/project/log.txt after running the 'generatelogs' command"
-              exit 1
-            fi
-      - endmission:
-          exitCode: 0
-
+      - checkout
+      - run: echo "Deploy complete"
 
 workflows:
   version: 2
-  orb-intro-workflow:
+  build-test-and-deploy:
     jobs:
-      - orb-intro
+      - build:
+          filters:
+            tags:
+              only: /.*/
+      - test:
+          filters:
+            tags:
+              only: /.*/
+          requires:
+            - build
+      - deploy:
+          filters:
+            tags:
+              only: /beta-.*/
+          requires:
+            - test
