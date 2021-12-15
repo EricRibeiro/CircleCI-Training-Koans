@@ -38,7 +38,7 @@ jobs:
               exit 1
             fi
       - endmission:
-          exitCode: 1
+          exitCode: 0
 
 
 workflows:
