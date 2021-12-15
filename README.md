@@ -31,3 +31,8 @@ You can find below the job link for each challenge:
  - [14 Conditional Logics](https://app.circleci.com/pipelines/github/EricRibeiro/CircleCI-Training-Koans/34/workflows/78935339-95d3-42ae-8f90-52f85e7ac5ab)
  - [15 API Trigger](https://app.circleci.com/pipelines/github/EricRibeiro/CircleCI-Training-Koans/39/workflows/d0d5de3a-fc99-4935-9cd1-23b36da93303)
  - [16 Reusable config](https://app.circleci.com/pipelines/github/EricRibeiro/CircleCI-Training-Koans/42/workflows/bf2125f8-d3c6-4d2b-a349-eb190d7dfd4f)
+ - 17 Executors:
+   - [Windows](https://app.circleci.com/pipelines/github/EricRibeiro/CircleCI-Training-Koans/48/workflows/23f2456b-f60c-42e8-b8d4-ad4a6d3b4d59)
+   - [macOS](https://app.circleci.com/pipelines/github/EricRibeiro/CircleCI-Training-Koans/48/workflows/0256e3ff-3544-47d3-93b8-8939ea38b22a)
+   - [Machine](https://app.circleci.com/pipelines/github/EricRibeiro/CircleCI-Training-Koans/48/workflows/c1cf1f94-9752-42c8-aa4c-a1e6f2671c26)
+   - [Docker](https://app.circleci.com/pipelines/github/EricRibeiro/CircleCI-Training-Koans/48/workflows/6b270868-0906-424c-9acd-cd590084daf2)
