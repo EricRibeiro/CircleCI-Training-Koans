@@ -37,6 +37,6 @@ workflows:
       - deploy:
           filters:
             tags:
-              only: /beta-.*/
+              only: /^beta-.*/
           requires:
             - test
