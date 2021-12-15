@@ -1,42 +1,41 @@
 version: 2.1
 
+orbs:
+  win: circleci/windows@2.4.1
+
 jobs:
-  build:
+  build-docker:
     docker:
-      - image: circleci/node
+      - image: cimg/node:17.2.0
     steps:
-      - checkout
-      - run: echo "Building complete"
-  test:
-    docker:
-      - image: circleci/node
+      - run: echo "docker image"
+  build-machine:
+    machine:
+      image: ubuntu-2004:202111-01
     steps:
-      - checkout
-      - run: echo "Testing complete"
-  deploy:
-    docker:
-      - image: circleci/node
+      - run: echo "machine image"
+  build-macos:
+    macos:
+      xcode: 13.2.0
     steps:
-      - checkout
-      - run: echo "Deploy complete"
+      - run: echo "macos image"
+  build-windows:
+    executor: win/default
+    steps:
+      - run: Write-Host 'windows image'
+
 
 workflows:
   version: 2
-  build-test-and-deploy:
+  docker:
     jobs:
-      - build:
-          filters:
-            tags:
-              only: /.*/
-      - test:
-          filters:
-            tags:
-              only: /.*/
-          requires:
-            - build
-      - deploy:
-          filters:
-            tags:
-              only: /beta-.*/
-          requires:
-            - test
+      - build-docker
+  machine: 
+    jobs:
+      - build-machine
+  macos:
+    jobs:
+      - build-macos
+  windows:
+    jobs:
+      - build-windows
