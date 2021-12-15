@@ -27,5 +27,5 @@ You can find below the job link for each challenge:
  - [12 Matrix Builds](https://app.circleci.com/pipelines/github/EricRibeiro/CircleCI-Training-Koans/32/workflows/6550c4ad-e01f-48ae-9e4b-9f0d7b7f8082) 
  - [13 Workspaces](https://app.circleci.com/pipelines/github/EricRibeiro/CircleCI-Training-Koans/33/workflows/a8b0ceeb-a077-435f-8a8f-14c4fa3d9e95) 
  - [14 Conditional Logics](https://app.circleci.com/pipelines/github/EricRibeiro/CircleCI-Training-Koans/34/workflows/78935339-95d3-42ae-8f90-52f85e7ac5ab)
- - 15 API Trigger:
- - 16 Reusable config:
+ - [15 API Trigger](https://app.circleci.com/pipelines/github/EricRibeiro/CircleCI-Training-Koans/39/workflows/d0d5de3a-fc99-4935-9cd1-23b36da93303)
+ - [16 Reusable config]()
